@@ -1,0 +1,539 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+
+/* 
+.kleuren{
+background:#4333A6; donkerblauw
+background:#1196A5; aqua
+background:#F51860; roze
+background:#F28705; oranje
+} */
+
+/* navbar */
+.logo {
+  margin-top: 0.5vh;
+  height: 9vh;
+  float: left;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  width: 100%;
+  height: 10vh;
+  background: white;
+  overflow: hidden;
+}
+
+nav ul {
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links li a {
+  color: #4333A6;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+nav li .active {
+  color: #F51860;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background: #4333A6;
+    margin: 5px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav li .active {
+    color: white;
+    color: white;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+
+  .nav-links {
+    position: fixed;
+    background: #F51860;
+    opacity: 0.95;
+    height: 70vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -20%);
+    -webkit-clip-path: circle(100px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .nav-links.open {
+    clip-path: circle(100vh at 90% -20%);
+    -webkit-clip-path: circle(100vh at 90% -20%);
+    pointer-events: all;
+
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .nav-links li a {
+    font-size: 25px;
+  }
+
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+
+  li.fade {
+    opacity: 1;
+
+  }
+}
+
+/* welkom */
+
+.welkom {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 80vh;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1430px) {
+  .welkom {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .welkom {
+    height: 40vh;
+  }
+}
+
+.welkom img {
+  width: 100%;
+}
+
+.welkom h1 {
+  color: white;
+  font-size: 5vw;
+  float: left;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.welkom h2 {
+  color: #F28705;
+  font-size: 3vw;
+  float: left;
+  position: absolute;
+  margin-top: 4vh;
+  top: 30%;
+  left: 15%;
+}
+
+.titel {
+  text-align: center;
+  font-size: 60px;
+  padding: 30px 0;
+  color: #4333A6;
+}
+
+.ondertitel {
+  text-align: center;
+  margin: 10px auto;
+  width: 40%;
+  font-size: 20px;
+}
+
+/* workshops */
+
+.workshopalle {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.workshopenkele {
+  width: 380px;
+  height: 510px;
+  float: left;
+  margin: 0 5px 10px 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .workshopalle {
+    max-width: 780px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .workshopalle {
+    max-width: 390px;
+  }
+}
+
+.workshopthumbnail {
+  background: #cfcfcf;
+  width: 80%;
+  height: 60%;
+  margin: 10% auto auto 10%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.workshopknop {
+  display: block;
+  background: #F51860;
+  width: 50%;
+  height: 10%;
+  margin: 10% auto;
+  border-radius: 10px;
+  text-decoration: none;
+  position: relative;
+}
+
+.workshopknop p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  margin-left: 13%;
+  transform: translateY(-50%);
+}
+
+.workshopalleknopblok {
+  display: inline-block;
+  width: 100%;
+  height: 7vh;
+  position: relative;
+  margin: 0 auto 5%;
+  font-size: 25px;
+}
+
+.workshopalleknop {
+  display: block;
+  background: #F51860;
+  color: white;
+  width: 234px;
+  border-radius: 20px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 7vh;
+  text-decoration: none;
+}
+
+
+/* wat is stellar? */
+
+/* 
+.workshopalle {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.workshopenkele {
+  width: 380px;
+  height: 510px;
+  float: left;
+  margin: 0 5px 10px 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .workshopalle {
+    max-width: 780px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .workshopalle {
+    max-width: 390px;
+  }
+} */
+
+.uitlegtitel {
+  color: white;
+  background: #4333A6;
+}
+
+.uitlegtekstblok {
+  max-width: 1900px;
+  margin: 0 auto;
+  text-align: center;
+  background: #4333A6;
+}
+
+.uitlegtekst h2 {
+  color: white;
+  width: 50%;
+  line-height: 35px;
+  font-size: 30px;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1510px) {
+  .uitlegtekst h2 {
+    max-width: 1000px;
+  }
+}
+
+/* tutorials */
+
+
+.tutorialtitel {
+  color: #F28705;
+}
+
+.tutorialnaam {
+  color: #F28705;
+  display: block;
+  width: 60%;
+  font-size: 40px;
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* videos */
+
+.video-container {
+  position: relative;
+  padding-bottom: 36.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+
+/* workshop.html */
+
+
+.workshopachtergrond {
+  background: 4333A6;
+  width: 100%;
+}
+
+
+.download {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+}
+
+.downloadknop {
+  display: block;
+  position: relative;
+  height: 50%;
+  width: 20%;
+  margin: 0 auto;
+  background: #4333A6;
+  color: white;
+  border-radius: 20px;
+  font: 20px;
+  line-height: 5vh;
+  text-decoration: none;
+}
+
+
+/* footer */
+
+footer {
+  width: 100%;
+  height: 5vh;
+
+}
+
+footer p {
+  line-height: 5vh;
+}
